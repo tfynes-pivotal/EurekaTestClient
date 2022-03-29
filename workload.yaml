@@ -1,9 +1,11 @@
 apiVersion: carto.run/v1alpha1
 kind: Workload
 metadata:
+  annotations:
+    autoscaling.knative.dev/minScale: "1"
   labels:
     apps.tanzu.vmware.com/workload-type: web
-  name: EurekaTestClient
+  name: eureka_test_client
   namespace: default
 spec:
   source:
