@@ -1,0 +1,35 @@
+apiVersion: carto.run/v1alpha1
+kind: Workload
+metadata:
+  creationTimestamp: "2022-03-29T19:28:05Z"
+  generation: 1
+  labels:
+    apps.tanzu.vmware.com/workload-type: web
+  name: etc
+  namespace: default
+  resourceVersion: "75116973"
+  uid: 6a2d6a57-85fa-405b-a6a0-2c7549e47a91
+spec:
+  source:
+    image: index.docker.io/fynesy/etc:latest@sha256:91d954ff399d1df69805e9f37f4ae39db6234ab5919e92d225930d69c27b9000
+status:
+  conditions:
+  - lastTransitionTime: "2022-03-29T19:28:05Z"
+    message: ""
+    reason: Ready
+    status: "True"
+    type: SupplyChainReady
+  - lastTransitionTime: "2022-03-29T19:29:37Z"
+    message: ""
+    reason: ResourceSubmissionComplete
+    status: "True"
+    type: ResourcesSubmitted
+  - lastTransitionTime: "2022-03-29T19:29:37Z"
+    message: ""
+    reason: Ready
+    status: "True"
+    type: Ready
+  observedGeneration: 1
+  supplyChainRef:
+    kind: ClusterSupplyChain
+    name: source-to-url
